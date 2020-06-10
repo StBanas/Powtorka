@@ -15,5 +15,6 @@ public class EbayTestingApp {
         WebElement inputField = driver.findElement(By.name("_nkw"));
         inputField.sendKeys("Laptop");
         inputField.submit();
+
     }
 }
