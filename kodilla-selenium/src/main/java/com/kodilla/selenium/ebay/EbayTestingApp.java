@@ -16,6 +16,4 @@ public class EbayTestingApp {
         inputField.sendKeys("Laptop");
         inputField.submit();
     }
-
-
 }
