@@ -1,9 +1,12 @@
 package message.delivery;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TransportTestSuite {
-    
+
+    @Test
     public void correctIfNullIsPassed() {
 
         //given
@@ -11,8 +14,14 @@ public class TransportTestSuite {
         DeliveryService deliveryService = new DeliveryService();
         //when
         deliveryService.sendPackage(deliveryPackage, TransportTypes.SHIP);
+        String result = deliveryPackage.getPackageName().toString();
+
+
+        System.out.println(result);
         //Then
-        assertEquals("Book",deliveryPackage.getPackageName());
+        assertEquals("Book", result);
+
+
 
 
     }
